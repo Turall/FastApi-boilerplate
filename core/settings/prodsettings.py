@@ -19,5 +19,5 @@ class ProdSettings(BaseConfig):
     
     DATABASE_URL = config(
         "DATABASE_URL",
-        default=f"asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?sslmode=require",
+        default=f"asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}",
     )

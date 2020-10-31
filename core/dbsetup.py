@@ -17,16 +17,14 @@ class SurrogatePK(object):
     id = Column(UUIDType(binary=False), primary_key=True)
 
 
-class Model(Timestamp, SurrogatePK,db.Model):
+class Model(SurrogatePK,db.Model):
     __abstract__ = True
 
     @classmethod
     async def create(cls, **kwargs):
         if issubclass(cls, SurrogatePK):
-            print(kwargs)
             unique_id = uuid4()
             if not kwargs.get("id"):
-                
                 kwargs["id"] = unique_id
         return await cls(**kwargs)._create()
 

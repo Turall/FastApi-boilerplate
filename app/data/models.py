@@ -14,3 +14,13 @@ from uuid import uuid4
 
 
 #write your db models here
+
+class Example(Model):
+    """
+    __tablename__ = "example"
+
+    name = Column(String(),nullable=False)
+    email = Column(String(),nullable=False,index=True)
+
+    """
+    pass
