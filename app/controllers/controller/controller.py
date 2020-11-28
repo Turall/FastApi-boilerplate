@@ -2,6 +2,8 @@ from fastapi import APIRouter, HTTPException,Cookie, Depends,Header,File, Body,Q
 from starlette.responses import JSONResponse
 from core.factories import settings
 from app.controllers.controller.schemas import TestErrorSchema, TestSchema
+from core.extensions import db
+from app.data.models import Example
 
 router = APIRouter()
 
@@ -37,4 +39,3 @@ async def test_test(test: dict=Body(None,example={"test": "mytest" })) -> JSONRe
 async  def test_2(test: str= Query(None, alias="token", title="token", description="Send token in the query"))-> JSONResponse:
 
     return JSONResponse({"result" : True})
-

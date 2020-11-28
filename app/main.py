@@ -7,7 +7,6 @@ from sentry_sdk.integrations.sqlalchemy import SqlalchemyIntegration
 from core.factories import settings
 from core.extensions import db
 from starlette.requests import Request
-
 app = FastAPI()
 db.init_app(app)
 
