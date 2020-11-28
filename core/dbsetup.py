@@ -1,10 +1,9 @@
 from uuid import uuid4
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType, Timestamp
-# from sqlalchemy import  Column, ForeignKey, Integer, String,BOOLEAN
 from core.extensions import db     
 relationship = relationship
-Column,Integer,String,BOOLEAN,ForeignKey = db.Column,db.Integer,db.String,db.BOOLEAN,db.ForeignKey
+Column,Integer,String,BOOLEAN,ForeignKey,Datetime = db.Column,db.Integer,db.String,db.BOOLEAN,db.ForeignKey,db.DateTime
 
 
 
