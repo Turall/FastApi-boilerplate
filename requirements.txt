@@ -48,7 +48,7 @@ starlette-prometheus==0.5.0
 toml==0.10.0
 twilio==6.35.2
 typed-ast==1.4.0
-urllib3==1.25.7
+urllib3==1.25.8
 uvicorn==0.12.2
 uvloop==0.14.0
 websockets==8.1
