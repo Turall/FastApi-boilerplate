@@ -49,6 +49,14 @@ add .env to gitignore
 
 rm -rf .git
 ```
+## Other FastAPI project templates
+
+[full-stack-fastapi-postgresql](https://github.com/tiangolo/full-stack-fastapi-postgresql)
+[full-stack-fastapi-couchbase](https://github.com/tiangolo/full-stack-fastapi-couchbase)
+[cookiecutter-spacy-fastapi](https://github.com/microsoft/cookiecutter-spacy-fastapi)
+[fast-api-project-template](https://github.com/bergran/fast-api-project-template)
+[startapp](https://github.com/sabuhish/startapp)
+[fastapi-nano](https://github.com/rednafi/fastapi-nano)
 
 
 ##  Contributing
