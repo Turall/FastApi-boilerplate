@@ -1,10 +1,6 @@
 from uuid import uuid4
-from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType, Timestamp # add created,updated columns to model
-from core.extensions import db     
-relationship = relationship
-Column,Integer,String,BOOLEAN,ForeignKey,Datetime = db.Column,db.Integer,db.String,db.BOOLEAN,db.ForeignKey,db.DateTime
-
+from core.extensions import db
 
 
 class SurrogatePK(object):
@@ -13,7 +9,7 @@ class SurrogatePK(object):
 
     __table_args__ = {"extend_existing": True}
 
-    id = Column(UUIDType(binary=False), primary_key=True)
+    id = db.Column(UUIDType(binary=False), primary_key=True)
 
 
 class Model(Timestamp,SurrogatePK,db.Model):

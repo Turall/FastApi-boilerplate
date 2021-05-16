@@ -1,7 +1,7 @@
 from starlette.config import Config
-from starlette.datastructures import Secret,URL
+from starlette.datastructures import Secret
 from core.settings.settings import BaseConfig
-import os
+
 
 class ProdSettings(BaseConfig):
 
@@ -9,14 +9,14 @@ class ProdSettings(BaseConfig):
 
     config = Config()
 
-    DB_USER = config("DB_USER", cast=str, default="postgres")
-    DB_PASSWORD = config("DB_PASSWORD", cast=Secret, default="postgres")
-    DB_HOST = config("DB_HOST", cast=str, default="db")
-    DB_PORT = config("DB_PORT", cast=str, default="5432")
-    DB_NAME = config("DB_NAME", cast=str, default="postgres")
-    INCLUDE_SCHEMA=config("INCLUDE_SCHEMA", cast=bool, default=False)
+    DB_USER = config("DB_USER", cast=str)
+    DB_PASSWORD = config("DB_PASSWORD", cast=Secret)
+    DB_HOST = config("DB_HOST", cast=str)
+    DB_PORT = config("DB_PORT", cast=str)
+    DB_NAME = config("DB_NAME", cast=str)
+    INCLUDE_SCHEMA = config("INCLUDE_SCHEMA", cast=bool)
     SSL_CERT_FILE = config("SSL_CERT_FILE")
-    
+
     DATABASE_URL = config(
         "DATABASE_URL",
         default=f"asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}",

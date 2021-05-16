@@ -1,6 +1,6 @@
-from gino.ext.starlette import Gino
 from core.factories import settings
 from ssl import create_default_context
+from gino.ext.starlette import Gino
 
 
 if not settings.DEBUG:
